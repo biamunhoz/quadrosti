@@ -1,0 +1,39 @@
+<br>
+<h2>Recado</h2>
+
+<%= render 'form', recado: @recado %>
+
+<br>
+
+  <table >
+    <tbody>
+    <% novalinha = true %>
+          <% @recados.each do |recado| %>
+                <% if novalinha == true  %>
+                  <tr>
+                    <td>
+                      <div class="card bg-warning mb-3" style="max-width: 26rem;">
+                        <div class="card-body">
+                          <h3><b><%= recado.descricao %></b></h3>
+                          <%= link_to 'X', recado, method: :delete, class: 'btn btn-outline-danger' %>
+                      </div>
+                    <td>
+
+                  <% novalinha = false  %>
+                <% else %>
+                    <td>
+                      <div class="card bg-warning mb-3" style="max-width: 26rem;">
+                        <div class="card-body">
+                          <h3><b><%= recado.descricao %></b></h3>
+                          <%= link_to 'X', recado, method: :delete, class: 'btn btn-outline-danger' %>
+                      </div>
+                    <td>    
+                    <% novalinha = true  %>    
+                </tr>        
+                <% end %>
+
+          <% end %>
+    </tbody>
+  </table>
+
+  <br>

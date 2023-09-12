@@ -1,0 +1,2 @@
+class Recado < ApplicationRecord
+end

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @recado.descricao %>
+</p>
+
+<p>
+  <strong>Autor:</strong>
+  <%= @recado.autor %>
+</p>
+
+<%= link_to 'Edit', edit_recado_path(@recado) %> |
+<%= link_to 'Back', recados_path %>

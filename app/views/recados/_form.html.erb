@@ -1,0 +1,41 @@
+<%= form_with(model: recado, local: true) do |form| %>
+  <% if recado.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(recado.errors.count, "error") %> prohibited this recado from being saved:</h2>
+
+      <ul>
+      <% recado.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+     
+  <!-- div class="radio-group">
+    <%= form.label :autor, "Autor:" %>
+    <br> 
+    <%= form.radio_button :autor, 'Cesar'  %> Cesar   
+    <br>
+    <%= form.radio_button :autor, 'Charles' %> Charles
+    <br>
+    <%= form.radio_button :autor, 'Edson'  %> Edson
+    <br>
+    <%= form.radio_button :autor, 'Fabi'   %>  Fabi
+    <br>
+    <%= form.radio_button :autor, 'Gera'   %> Gera
+    <br>
+    <%= form.radio_button :autor, 'Sidnei' %> Sidnei
+  </div -->
+  
+  <br>
+
+  <div class="form-group">
+    <%= form.label :descricao, "Anotação :" %>
+    <%= form.text_area :descricao, class: "form-control", cols: 15, rows: 1 %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit "Adicionar", class: 'btn btn-outline-primary'  %>
+  </div>
+<% end %>
