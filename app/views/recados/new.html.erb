@@ -5,7 +5,8 @@
 
 <br>
 
-  <table >
+
+  <!-- table >
     <tbody>
     <% novalinha = true %>
           <% @recados.each do |recado| %>
@@ -34,6 +35,20 @@
 
           <% end %>
     </tbody>
-  </table>
+  </table -->
 
-  <br>
+<div class="cont">
+  <% @recados.each do |recado| %>
+    <div class="col">
+      <div class="card bg-warning mb-3" >
+        <div class="card-body">
+          <h3><b><%= recado.descricao %></b></h3>
+          <%= link_to 'X', recado, method: :delete, class: 'btn btn-outline-danger' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+<br>

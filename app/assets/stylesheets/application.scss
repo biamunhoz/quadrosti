@@ -18,6 +18,15 @@
     max-width: 100%; /* obviously */
   }
   
-  // td {
-  //   display: inline-block;
-  // }
+  td {
+    display: inline-block;
+  }
+
+  .cont {
+    width: 1000px;
+    height: 400px;
+  }
+  .col {
+    display: inline-block;
+    width: 40%;
+  }
